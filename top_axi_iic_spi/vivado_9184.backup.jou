@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri May 29 09:21:46 2026
+# Process ID: 9184
+# Current directory: D:/top_axi_iic_spi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5748 D:\top_axi_iic_spi\top_axi_iic_spi.xpr
+# Log file: D:/top_axi_iic_spi/vivado.log
+# Journal file: D:/top_axi_iic_spi\vivado.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/top_axi_iic_spi/top_axi_iic_spi.xpr
+launch_simulation
+source tb_iic_master.tcl
+update_compile_order -fileset sources_1
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_spi_master [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_spi_master.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_reg_file [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_reg_file.tcl
+close_sim

@@ -1,0 +1,322 @@
+$date
+	Fri May 29 09:29:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_reg_file $end
+$var wire 1 ! spi_start $end
+$var wire 1 " spi_done_flag $end
+$var wire 8 # spi_data [7:0] $end
+$var wire 1 $ spi_busy $end
+$var wire 32 % reg_rdata [31:0] $end
+$var wire 1 & iic_start $end
+$var wire 1 ' iic_done_flag $end
+$var wire 8 ( iic_dev_addr [7:0] $end
+$var wire 8 ) iic_data [7:0] $end
+$var wire 1 * iic_busy $end
+$var reg 1 + clk $end
+$var reg 1 , iic_done $end
+$var reg 2 - reg_addr [1:0] $end
+$var reg 1 . reg_rd_en $end
+$var reg 32 / reg_wdata [31:0] $end
+$var reg 1 0 reg_wr_en $end
+$var reg 1 1 rst_n $end
+$var reg 1 2 spi_done $end
+$var reg 32 3 status [31:0] $end
+$var integer 32 4 errors [31:0] $end
+$scope module dut $end
+$var wire 1 + clk $end
+$var wire 1 , iic_done $end
+$var wire 2 5 reg_addr [1:0] $end
+$var wire 1 . reg_rd_en $end
+$var wire 32 6 reg_wdata [31:0] $end
+$var wire 1 0 reg_wr_en $end
+$var wire 1 1 rst_n $end
+$var wire 1 2 spi_done $end
+$var wire 8 7 spi_data [7:0] $end
+$var wire 8 8 iic_dev_addr [7:0] $end
+$var wire 8 9 iic_data [7:0] $end
+$var parameter 2 : REG_CTRL $end
+$var parameter 2 ; REG_IICDATA $end
+$var parameter 2 < REG_SPIDATA $end
+$var parameter 2 = REG_STATUS $end
+$var reg 1 * iic_busy $end
+$var reg 32 > iic_data_reg [31:0] $end
+$var reg 1 ' iic_done_flag $end
+$var reg 1 & iic_start $end
+$var reg 32 ? reg_rdata [31:0] $end
+$var reg 1 $ spi_busy $end
+$var reg 32 @ spi_data_reg [31:0] $end
+$var reg 1 " spi_done_flag $end
+$var reg 1 ! spi_start $end
+$upscope $end
+$scope task fail $end
+$var reg 1024 A msg [1023:0] $end
+$upscope $end
+$scope task pulse_iic_done $end
+$upscope $end
+$scope task pulse_spi_done $end
+$upscope $end
+$scope task reg_read $end
+$var reg 2 B addr [1:0] $end
+$var reg 32 C data [31:0] $end
+$upscope $end
+$scope task reg_write $end
+$var reg 2 D addr [1:0] $end
+$var reg 32 E data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 =
+b10 <
+b1 ;
+b0 :
+$end
+#0
+$dumpvars
+bx E
+bx D
+bx C
+bx B
+bx A
+b0 @
+b0 ?
+b0 >
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+02
+01
+00
+b0 /
+0.
+b0 -
+0,
+0+
+0*
+b0 )
+b0 (
+0'
+0&
+b0 %
+0$
+b0 #
+0"
+0!
+$end
+#5000
+1+
+#10000
+0+
+#15000
+1+
+#20000
+0+
+#25000
+1+
+#30000
+0+
+#35000
+1+
+#40000
+0+
+#45000
+11
+1+
+#50000
+0+
+#55000
+1+
+#60000
+0+
+#65000
+b101000010100101 E
+b1 D
+1+
+#70000
+10
+b101000010100101 /
+b101000010100101 6
+b1 -
+b1 5
+0+
+#75000
+b1010000 (
+b1010000 8
+b10100101 )
+b10100101 9
+b101000010100101 >
+1+
+#80000
+b1 E
+b0 D
+00
+0+
+#85000
+1+
+#90000
+10
+b1 /
+b1 6
+b0 -
+b0 5
+0+
+#95000
+1*
+1&
+1+
+#100000
+00
+0+
+#105000
+0&
+1+
+#110000
+1,
+0+
+#115000
+1'
+0*
+1+
+#116000
+b11 B
+0,
+#120000
+1.
+b11 -
+b11 5
+0+
+#125000
+0'
+b10 %
+b10 ?
+1+
+#126000
+b10 C
+#130000
+b10 3
+0.
+0+
+#135000
+1+
+#140000
+1.
+0+
+#145000
+b0 %
+b0 ?
+1+
+#146000
+b0 C
+#150000
+b1011100 E
+b10 D
+b0 3
+0.
+0+
+#155000
+1+
+#160000
+10
+b1011100 /
+b1011100 6
+b10 -
+b10 5
+0+
+#165000
+b1011100 #
+b1011100 7
+b1011100 @
+1+
+#170000
+b10 E
+b0 D
+00
+0+
+#175000
+1+
+#180000
+10
+b10 /
+b10 6
+b0 -
+b0 5
+0+
+#185000
+1$
+1!
+1+
+#190000
+00
+0+
+#195000
+0!
+1+
+#200000
+12
+0+
+#205000
+1"
+0$
+1+
+#206000
+02
+#210000
+1.
+b11 -
+b11 5
+0+
+#215000
+0"
+b1000 %
+b1000 ?
+1+
+#216000
+b1000 C
+#220000
+b1000 3
+0.
+0+
+#225000
+1+
+#230000
+1.
+0+
+#235000
+b0 %
+b0 ?
+1+
+#236000
+b0 C
+#240000
+b0 3
+0.
+0+
+#245000
+1+
+#250000
+0+
+#255000
+1+
+#260000
+0+
+#265000
+1+
+#270000
+0+
+#275000
+1+
+#280000
+0+
+#285000
+1+
