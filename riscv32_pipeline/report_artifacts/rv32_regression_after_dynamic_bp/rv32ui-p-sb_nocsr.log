@@ -1,3 +1,0 @@
-START test_current.mem
-RESULT FAIL test_current.mem code=00000002 pc=0000054c wb_reg=6 wb_value=00000002 time=2945000
-D:\riscv32_pipeline\riscv32_pipeline.srcs\sim_1\new\tb_bram_batch.v:142: $finish called at 2945000 (1ps)

@@ -1,8 +1,0 @@
-Branch predictor accuracy analysis
-Workload: coremark_uart.mem, first 2000000 cycles
-Method: count EX-stage branch/jump events when PCCTRL_EX indicates B/J and no M/memory stall. Correct means risk_Ctrl=0, fail means risk_Ctrl=1.
-Result: total=1080 correct=616 fail=464 accuracy=57.04%.
-B-type: total=1012 correct=616 accuracy=60.87%, actual taken=396, not taken=616.
-J/JALR-like: total=68 correct=0 accuracy=0.00%.
-Aligned predicted_taken was 0 for all counted events, so the measured accuracy is effectively the static not-taken baseline in this CoreMark slice.
-The BHT/BTB instantaneous hit probes are not cycle-aligned to EX events, but they were very low: BHT hit 0, BTB hit 11 in counted rows.

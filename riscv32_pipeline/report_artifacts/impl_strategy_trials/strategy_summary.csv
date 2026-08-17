@@ -1,4 +1,0 @@
-run,strategy,status,wns,util_lut,util_ff,util_bram,power_w
-impl_trial_perf_explore,Performance_Explore,route_design Complete, Failed Timing!,-0.137,NA,NA,NA,NA
-impl_trial_netdelay_high,Performance_NetDelay_high,route_design Complete!,0.084,NA,NA,NA,NA
-impl_trial_postroute_phys,Performance_ExplorePostRoutePhysOpt,Not started phys_opt_design (Post-Route),,,,,
