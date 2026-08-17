@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May  4 10:29:11 2026
+# Process ID: 1836
+# Current directory: D:/riscv32_pipeline_cache/riscv32_pipeline.runs/dcache_data_bram_synth_1
+# Command line: vivado.exe -log dcache_data_bram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dcache_data_bram.tcl
+# Log file: D:/riscv32_pipeline_cache/riscv32_pipeline.runs/dcache_data_bram_synth_1/dcache_data_bram.vds
+# Journal file: D:/riscv32_pipeline_cache/riscv32_pipeline.runs/dcache_data_bram_synth_1\vivado.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source dcache_data_bram.tcl -notrace

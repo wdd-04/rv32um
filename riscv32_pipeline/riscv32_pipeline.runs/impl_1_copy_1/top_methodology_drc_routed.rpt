@@ -1,0 +1,63 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Sat May  2 21:46:49 2026
+| Host         : WDDdLaptop running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 2
++---------+----------+--------------------------------------------------------+------------+
+| Rule    | Severity | Description                                            | Violations |
++---------+----------+--------------------------------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert                           | 1          |
+| XDCC-7  | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++---------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell mini_rv_u/Id/regFile/isNeededWrite[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) bus/gen_timer.interface_timer/timer_count_reg[0]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[10]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[11]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[12]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[13]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[14]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[15]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[16]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[17]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[18]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[19]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[1]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[20]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[21]/CLR,
+bus/gen_timer.interface_timer/timer_count_reg[22]/CLR
+ (the first 15 of 2114 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} [get_ports clk] (Source: D:/riscv32_pipeline/riscv32_pipeline.srcs/constrs_1/new/timing.xdc (Line: 9))
+Previous: create_clock -period 20.000 [get_ports clk] (Source: d:/riscv32_pipeline/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk.xdc (Line: 56))
+Related violations: <none>
+
+

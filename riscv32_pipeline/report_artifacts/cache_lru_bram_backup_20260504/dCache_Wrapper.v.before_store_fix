@@ -1,0 +1,77 @@
+`include "param.v"
+
+module dCache_Wrapper (
+    input  wire                                clk,
+    input  wire                                rst_n,
+    input  wire                                cpu_valid,
+    input  wire [`IO_BUS_WIDTH_ADDR - 1:0]     cpu_addr,
+    input  wire [`IO_BUS_WIDTH_CTRL - 1:0]     cpu_ctrl,
+    input  wire [3:0]                          cpu_we,
+    input  wire [`IO_BUS_WIDTH_DATA - 1:0]     cpu_wd,
+    output wire [`IO_BUS_WIDTH_DATA - 1:0]     cpu_rd,
+    output wire [`IO_BUS_WIDTH_ADDR - 1:0]     mem_addr,
+    output wire [`IO_BUS_WIDTH_CTRL - 1:0]     mem_ctrl,
+    output wire [3:0]                          mem_we,
+    output wire [`IO_BUS_WIDTH_DATA - 1:0]     mem_wd,
+    input  wire [`IO_BUS_WIDTH_DATA - 1:0]     mem_rd
+);
+    reg        pending;
+    reg        req_is_load;
+    reg        req_is_store;
+    reg [31:0] req_addr;
+
+    wire [31:0] cache_dout;
+    wire        cache_hit;
+
+    wire access_start  = cpu_valid && !pending;
+    wire access_commit = pending;
+    wire [31:0] cache_addr = pending ? req_addr : cpu_addr;
+
+    wire load_fill    = access_commit && req_is_load  && !cache_hit;
+    wire store_update = access_commit && req_is_store &&  cache_hit;
+    wire cache_we     = load_fill || store_update;
+    wire [31:0] cache_din = load_fill ? mem_rd : cpu_wd;
+    wire [3:0]  cache_byte_we = load_fill ? 4'b1111 : cpu_we;
+
+    cache #(.INDEX_WIDTH(5), .USE_DCACHE_BRAM(1)) u_dcache (
+        .clk(clk),
+        .rst_n(rst_n),
+        .flush(1'b0),
+        .addr(cache_addr),
+        .din(cache_din),
+        .we(cache_we),
+        .byte_we(cache_byte_we),
+        .dout(cache_dout),
+        .hit(cache_hit)
+    );
+
+    assign mem_addr = cpu_addr;
+    assign mem_ctrl = cpu_ctrl;
+    assign mem_we   = cpu_we;
+    assign mem_wd   = cpu_wd;
+
+    // Write-through, no-write-allocate dCache:
+    // - load hit: return cached BRAM data
+    // - load miss: return backing data_mem and fill cache for future loads
+    // - store hit: update cache bytes and backing data_mem
+    // - store miss: only update backing data_mem to avoid partial-line pollution
+    assign cpu_rd = (access_commit && req_is_load && cache_hit) ? cache_dout : mem_rd;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            pending      <= 1'b0;
+            req_is_load  <= 1'b0;
+            req_is_store <= 1'b0;
+            req_addr     <= 32'b0;
+        end else if (access_start) begin
+            pending      <= 1'b1;
+            req_is_load  <= (cpu_we == 4'b0000);
+            req_is_store <= (cpu_we != 4'b0000);
+            req_addr     <= cpu_addr;
+        end else if (pending) begin
+            pending      <= 1'b0;
+            req_is_load  <= 1'b0;
+            req_is_store <= 1'b0;
+        end
+    end
+endmodule

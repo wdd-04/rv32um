@@ -1,0 +1,54 @@
+RISCV_PREFIX ?= riscv64-unknown-elf-
+CC      := $(RISCV_PREFIX)gcc
+OBJDUMP := $(RISCV_PREFIX)objdump
+OBJCOPY := $(RISCV_PREFIX)objcopy
+PYTHON  ?= python3
+
+APP ?= matmul_demo
+CPU_HZ ?= 75000000
+
+SRCS := start.S $(APP).c
+
+CFLAGS := \
+	-O2 \
+	-march=rv32im \
+	-mabi=ilp32 \
+	-mcmodel=medany \
+	-ffunction-sections \
+	-fdata-sections \
+	-fno-builtin \
+	-fno-common \
+	-DCPU_HZ=$(CPU_HZ)
+
+LDFLAGS := \
+	-T link.ld \
+	-nostartfiles \
+	-nostdlib \
+	-Wl,--gc-sections \
+	-Wl,-Map,$(APP).map
+
+.PHONY: all clean
+
+all: $(APP).coe $(APP).mem $(APP).asm $(APP)_source.asm
+
+$(APP).elf: $(SRCS) link.ld
+	$(CC) $(CFLAGS) $(LDFLAGS) $(SRCS) -o $@ -lgcc
+
+$(APP).asm: $(APP).elf
+	$(OBJDUMP) -d $< > $@
+
+$(APP)_source.asm: $(APP).elf
+	$(OBJDUMP) -S $< > $@
+
+$(APP).bin: $(APP).elf
+	$(OBJCOPY) -O binary $< $@
+
+$(APP).coe: $(APP).bin bin2coe.py
+	$(PYTHON) bin2coe.py $< $@
+
+$(APP).mem: $(APP).bin bin2mem.py
+	$(PYTHON) bin2mem.py $< $@
+
+clean:
+	rm -f $(APP).elf $(APP).asm $(APP)_source.asm $(APP).bin \
+	      $(APP).coe $(APP).mem $(APP).map

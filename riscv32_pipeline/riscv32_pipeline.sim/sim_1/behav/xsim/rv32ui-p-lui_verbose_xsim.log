@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat May  2 00:42:26 2026
+# Process ID: 24188
+# Current directory: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log rv32ui-p-lui_verbose_xsim.log -mode tcl -source {xsim.dir/tb_official_verbose_behav/xsim_script.tcl}
+# Log file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim/rv32ui-p-lui_verbose_xsim.log
+# Journal file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim\xsim.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_official_verbose_behav/xsim_script.tcl
+# xsim {tb_official_verbose_behav} -autoloadwcfg -tclbatch {run_all_coremark.tcl}
+Time resolution is 1 ps
+source run_all_coremark.tcl
+## run all
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+START official_test.mem
+RESULT PASS pc=0000014c time=795000
+$finish called at time : 795 ns : File "D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim/tb_official_verbose.v" Line 89
+INFO: [Common 17-206] Exiting xsim at Sat May  2 00:42:28 2026...

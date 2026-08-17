@@ -1,0 +1,2 @@
+data_mem.v,verilog,xil_defaultlib,../../../../riscv32_pipeline.gen/sources_1/ip/data_mem_2/sim/data_mem.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

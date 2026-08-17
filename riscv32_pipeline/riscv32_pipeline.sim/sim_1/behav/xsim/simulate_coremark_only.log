@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri May  1 22:29:03 2026
+# Process ID: 28064
+# Current directory: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log simulate_coremark_only.log -mode tcl -source {xsim.dir/tb_coremark_only_behav/xsim_script.tcl}
+# Log file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim/simulate_coremark_only.log
+# Journal file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim\xsim.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_coremark_only_behav/xsim_script.tcl
+# xsim {tb_coremark_only_behav} -autoloadwcfg -tclbatch {tb_top.tcl}
+Time resolution is 1 ps
+source tb_top.tcl
+## set curr_wave [current_wave_config]
+## if { [string length $curr_wave] == 0 } {
+##   if { [llength [get_objects]] > 0} {
+##     add_wave /
+##     set_property needs_save false [current_wave_config]
+##   } else {
+##      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+##   }
+## }
+WARNING: [Wavedata 42-489] Can't add object "/tb_top/data_ram" to the wave window because it has 262144 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+## run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+----------------------------------------------
+         CoreMark Simulation Started         
+----------------------------------------------
+INFO: [Common 17-206] Exiting xsim at Fri May  1 22:29:05 2026...

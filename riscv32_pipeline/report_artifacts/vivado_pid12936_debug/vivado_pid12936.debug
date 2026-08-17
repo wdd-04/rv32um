@@ -1,0 +1,29 @@
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2021.2 (64-bit)
+# SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Current time: Sun May 03 02:19:15 CST 2026
+# Process ID (PID): 12936
+# User: »ªË¶
+# OS: Windows 10
+# Project: riscv32_pipeline
+# Part: xc7z020clg400-2
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Sun May 03 02:19:15 CST 2026
+ui.utils.j: ui.frmwork.cmd.CommandFailedException: boost::filesystem::status: ¾Ü¾ø·ÃÎÊ¡£: "D:/riscv32_pipeline/riscv32_pipeline.runs/synth_1_copy_1/top_utilization_synth.pb" ui.frmwork.cmd.CommandFailedException: boost::filesystem::status: ¾Ü¾ø·ÃÎÊ¡£: "D:/riscv32_pipeline/riscv32_pipeline.runs/synth_1_copy_1/top_utilization_synth.pb"
+	at ui.project.projecti.HAPRRunMgr_updateAllRuns(Native Method)
+	at ui.data.experiment.D.cIz(SourceFile:210)
+	at ui.data.experiment.F.aXx(SourceFile:383)
+	at ui.frmwork.y.run(SourceFile:206)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+	at ui.utils.d.c.p(SourceFile:953)
+	at ui.utils.d.c.o(SourceFile:226)
+	at ui.utils.v.o(SourceFile:250)
+	at ui.frmwork.y.run(SourceFile:212)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+

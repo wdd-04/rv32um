@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May  4 19:14:53 2026
+# Process ID: 33520
+# Current directory: D:/riscv32_pipeline
+# Command line: vivado.exe -mode batch -source D:\riscv32_pipeline_cache\report_artifacts\impl_strategy_trials\list_strategies.tcl -journal D:\riscv32_pipeline_cache\report_artifacts\impl_strategy_trials\list_strategies.jou -log D:\riscv32_pipeline_cache\report_artifacts\impl_strategy_trials\list_strategies.log
+# Log file: D:/riscv32_pipeline_cache/report_artifacts/impl_strategy_trials/list_strategies.log
+# Journal file: D:\riscv32_pipeline_cache\report_artifacts\impl_strategy_trials\list_strategies.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source {D:\riscv32_pipeline_cache\report_artifacts\impl_strategy_trials\list_strategies.tcl}
+# open_project D:/riscv32_pipeline_cache/riscv32_pipeline.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1247.199 ; gain = 23.656
+# puts "RUNS:" 
+RUNS:
+# foreach r [get_runs] { puts "$r TYPE=[get_property IS_SYNTHESIS $r] STRATEGY=[get_property STRATEGY $r] STATUS=[get_property STATUS $r]" }
+synth_1 TYPE=1 STRATEGY=Vivado Synthesis Defaults STATUS=synth_design Complete!
+cpuclk_synth_1 TYPE=1 STRATEGY=Vivado Synthesis Defaults STATUS=synth_design Complete!
+data_mem_synth_1 TYPE=1 STRATEGY=Vivado Synthesis Defaults STATUS=synth_design Complete!
+inst_mem_synth_1 TYPE=1 STRATEGY=Vivado Synthesis Defaults STATUS=synth_design Complete!
+synth_1_copy_1 TYPE=1 STRATEGY=Flow_AreaOptimized_high STATUS=synth_design Complete!
+dcache_data_bram_synth_1 TYPE=1 STRATEGY=Vivado Synthesis Defaults STATUS=synth_design Complete!
+impl_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=Not started
+impl_1_copy_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=write_bitstream Complete!
+cpuclk_impl_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=Not started
+data_mem_impl_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=Not started
+inst_mem_impl_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=Not started
+impl_2 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=route_design Complete!
+dcache_data_bram_impl_1 TYPE=0 STRATEGY=Vivado Implementation Defaults STATUS=Not started
+# puts "IMPL_STRATEGIES:"
+IMPL_STRATEGIES:
+# catch {foreach s [get_strategies -type implementation] { puts $s }} msg
+# puts "MSG=$msg"
+MSG=invalid command name "get_strategies"
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 19:15:07 2026...

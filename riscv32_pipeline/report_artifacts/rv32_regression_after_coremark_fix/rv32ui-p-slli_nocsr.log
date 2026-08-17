@@ -1,0 +1,3 @@
+﻿START test_current.mem
+RESULT PASS test_current.mem pc=00000370 time=2845000
+D:\riscv32_pipeline\riscv32_pipeline.srcs\sim_1\new\tb_bram_batch.v:142: $finish called at 2845000 (1ps)

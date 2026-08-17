@@ -1,0 +1,350 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Thu May  7 22:56:14 2026
+| Host         : WDDdLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   272 |
+|    Minimum number of control sets                        |   272 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1315 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   272 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |   128 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   136 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            4 |
+| No           | No                    | Yes                    |             214 |           77 |
+| No           | Yes                   | No                     |               2 |            1 |
+| Yes          | No                    | No                     |            2468 |          780 |
+| Yes          | No                    | Yes                    |            3918 |         1872 |
+| Yes          | Yes                   | No                     |             269 |           80 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+----------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                             Enable Signal                            |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+----------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/E[0]                                              | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                1 |              3 |         3.00 |
+|  cpuClk/inst/clk_out1 | bus/gen_uart.interface_uart/uart_tx_inst/bit_idx[2]_i_1_n_0          | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |              3 |         1.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/FSM_onehot_state[2]_i_1_n_0                       | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                1 |              3 |         3.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/irom_valid_reg[0]                                    | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |              3 |         1.50 |
+|  cpuClk/inst/clk_out1 | bus/gen_uart.interface_uart/uart_tx_inst/FSM_onehot_state[3]_i_1_n_0 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                1 |              4 |         4.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/pred_taken_o_reg_2[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |              4 |         2.00 |
+|  cpuClk/inst/clk_out1 |                                                                      |                                                  |                4 |              6 |         1.50 |
+|  cpuClk/inst/clk_out1 | bus/gen_uart.interface_uart/uart_tx_inst/tx_data_reg_0               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                1 |              8 |         8.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/E[0]                                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_99[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_36[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_37[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_31[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_0[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_38[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_39[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_4[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_120[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_122[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_108[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_104[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_118[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_12[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_106[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_101[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_102[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_105[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_123[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_125[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_115[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_121[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_23[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_27[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_119[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_10[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_33[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_11[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_1[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_117[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_16[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_107[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_109[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_14[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_19[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_20[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_21[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_26[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_28[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_113[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_126[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_25[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                8 |             10 |         1.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_103[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_124[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_110[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_13[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_116[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_17[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_2[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_22[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_100[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_111[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_112[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_114[0]                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_15[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_24[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                8 |             10 |         1.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_18[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_29[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_30[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_32[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_3[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_34[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_35[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_71[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_61[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_80[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_51[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_59[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_72[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_8[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_44[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_47[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_43[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_54[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_66[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_57[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_68[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_70[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_53[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_78[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_86[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_87[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_45[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_83[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_73[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_89[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_42[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_60[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_75[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_93[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_40[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_6[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_94[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_95[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_46[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_81[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_58[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_84[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_48[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                9 |             10 |         1.11 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_56[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_85[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_41[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_77[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_88[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_65[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_62[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_9[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_91[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_92[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                6 |             10 |         1.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_64[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_96[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_97[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_76[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_49[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                7 |             10 |         1.43 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_90[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_69[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_52[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_82[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_98[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_63[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_67[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_5[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                3 |             10 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_7[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_74[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_79[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                4 |             10 |         2.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_50[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                5 |             10 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[2]_55[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                2 |             10 |         5.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[15][25]_i_1__0_n_0                    |                                                  |               15 |             26 |         1.73 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[7][25]_i_1__0_n_0                     |                                                  |               16 |             26 |         1.62 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[6][25]_i_1__0_n_0                     |                                                  |               12 |             26 |         2.17 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[13][25]_i_1__0_n_0                    |                                                  |               15 |             26 |         1.73 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[12][25]_i_1__0_n_0                    |                                                  |                8 |             26 |         3.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[14][25]_i_1__0_n_0                    |                                                  |               12 |             26 |         2.17 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[5][25]_i_1__0_n_0                     |                                                  |                7 |             26 |         3.71 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[7][25]_i_1__0_n_0                     |                                                  |               18 |             26 |         1.44 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[6][25]_i_1__0_n_0                     |                                                  |               15 |             26 |         1.73 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[4][25]_i_1__0_n_0                     |                                                  |                9 |             26 |         2.89 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[3][25]_i_1__0_n_0                     |                                                  |               14 |             26 |         1.86 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[10][25]_i_1__0_n_0                    |                                                  |               18 |             26 |         1.44 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[11][25]_i_1__0_n_0                    |                                                  |               12 |             26 |         2.17 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[13][25]_i_1__0_n_0                    |                                                  |               12 |             26 |         2.17 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[14][25]_i_1__0_n_0                    |                                                  |               10 |             26 |         2.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[10][25]_i_1__0_n_0                    |                                                  |               12 |             26 |         2.17 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[2][25]_i_1__0_n_0                     |                                                  |               10 |             26 |         2.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[15][25]_i_1__0_n_0                    |                                                  |               13 |             26 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[1][25]_i_1__0_n_0                     |                                                  |               10 |             26 |         2.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[3][25]_i_1__0_n_0                     |                                                  |                8 |             26 |         3.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[11][25]_i_1__0_n_0                    |                                                  |               15 |             26 |         1.73 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[4][25]_i_1__0_n_0                     |                                                  |               14 |             26 |         1.86 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[9][25]_i_1__0_n_0                     |                                                  |               17 |             26 |         1.53 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[0][25]_i_1__0_n_0                     |                                                  |               13 |             26 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[12][25]_i_1__0_n_0                    |                                                  |                7 |             26 |         3.71 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[0][25]_i_1__0_n_0                     |                                                  |               11 |             26 |         2.36 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[1][25]_i_1__0_n_0                     |                                                  |               10 |             26 |         2.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[8][25]_i_1__0_n_0                     |                                                  |               17 |             26 |         1.53 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[5][25]_i_1__0_n_0                     |                                                  |               14 |             26 |         1.86 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[8][25]_i_1__0_n_0                     |                                                  |               17 |             26 |         1.53 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag0[9][25]_i_1__0_n_0                     |                                                  |               20 |             26 |         1.30 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/tag1[2][25]_i_1__0_n_0                     |                                                  |               13 |             26 |         2.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[8][25]_i_1_n_0                   |                                                  |                5 |             26 |         5.20 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[1][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[13][25]_i_1_n_0                  |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[11][25]_i_1_n_0                  |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[4][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[15][25]_i_1_n_0                  |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[6][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[14][25]_i_1_n_0                  |                                                  |                5 |             26 |         5.20 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[6][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[3][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[2][25]_i_1_n_0                   |                                                  |               10 |             26 |         2.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[4][25]_i_1_n_0                   |                                                  |                5 |             26 |         5.20 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[15][25]_i_1_n_0                  |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[11][25]_i_1_n_0                  |                                                  |                9 |             26 |         2.89 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[12][25]_i_1_n_0                  |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[7][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[0][25]_i_1_n_0                   |                                                  |                5 |             26 |         5.20 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[10][25]_i_1_n_0                  |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[13][25]_i_1_n_0                  |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[2][25]_i_1_n_0                   |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[5][25]_i_1_n_0                   |                                                  |                8 |             26 |         3.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[7][25]_i_1_n_0                   |                                                  |                8 |             26 |         3.25 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[10][25]_i_1_n_0                  |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[3][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[5][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[8][25]_i_1_n_0                   |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[9][25]_i_1_n_0                   |                                                  |                9 |             26 |         2.89 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[14][25]_i_1_n_0                  |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[1][25]_i_1_n_0                   |                                                  |                4 |             26 |         6.50 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[9][25]_i_1_n_0                   |                                                  |                7 |             26 |         3.71 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag1[12][25]_i_1_n_0                  |                                                  |                5 |             26 |         5.20 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/IF_icache/u_cache/tag0[0][25]_i_1_n_0                   |                                                  |                6 |             26 |         4.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/dcache/u_dcache/E[0]                                       |                                                  |                9 |             30 |         3.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/ex_mem/DRAMWE_o_reg[0]_1[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                8 |             30 |         3.75 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_20[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               21 |             32 |         1.52 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_4[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               21 |             32 |         1.52 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_13[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               13 |             32 |         2.46 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_11[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_0[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               24 |             32 |         1.33 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_5[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               15 |             32 |         2.13 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_mul/q[31]_i_1_n_0                                     | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               13 |             32 |         2.46 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_4[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               24 |             32 |         1.33 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_7[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_12[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               15 |             32 |         2.13 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/quotient[31]_i_2_n_0                              | mini_rv_u/Ex/m_div/quotient[31]_i_1_n_0          |               13 |             32 |         2.46 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_15[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               15 |             32 |         2.13 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_18[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/quotient[31]_i_2_n_0                              |                                                  |               10 |             32 |         3.20 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_21[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               16 |             32 |         2.00 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_1[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               25 |             32 |         1.28 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_17[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_19[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_2[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               27 |             32 |         1.19 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_5[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               24 |             32 |         1.33 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_10[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               21 |             32 |         1.52 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_16[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               27 |             32 |         1.19 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_8[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               22 |             32 |         1.45 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_9[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_0[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               24 |             32 |         1.33 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_1[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               19 |             32 |         1.68 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_2[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               14 |             32 |         2.29 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_6[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               14 |             32 |         2.29 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[4]_3[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               17 |             32 |         1.88 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_14[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_6[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               20 |             32 |         1.60 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_22[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               16 |             32 |         2.00 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_3[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               18 |             32 |         1.78 |
+| ~cpuClk/inst/clk_out1 | mini_rv_u/mem_wb/RegWr_o_reg[3]_7[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               17 |             32 |         1.88 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_mul/busy                                              | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |                9 |             33 |         3.67 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/cnt[5]_i_1_n_0                                    |                                                  |               11 |             33 |         3.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_mul/cnt[3]_i_2_n_0                                    | mini_rv_u/Ex/m_mul/cnt[3]_i_1__0_n_0             |               10 |             36 |         3.60 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_2[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               39 |             59 |         1.51 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_12[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               31 |             59 |         1.90 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_10[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               35 |             59 |         1.69 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_15[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               30 |             59 |         1.97 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_1[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               26 |             59 |         2.27 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_9[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               37 |             59 |         1.59 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_11[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               34 |             59 |         1.74 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_4[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               27 |             59 |         2.19 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_14[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               32 |             59 |         1.84 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_6[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               36 |             59 |         1.64 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_7[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               34 |             59 |         1.74 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_5[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               37 |             59 |         1.59 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_3[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               36 |             59 |         1.64 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_13[0]                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               33 |             59 |         1.79 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_0[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               30 |             59 |         1.97 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/PCCTRL_o_reg[3]_8[0]                                 | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               31 |             59 |         1.90 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/pre_fetch_pc_d                                          | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               16 |             63 |         3.94 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[0][31]_i_1_n_0                                   |                                                  |               14 |             64 |         4.57 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[1][31]_i_1_n_0                                   |                                                  |               12 |             64 |         5.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[6][31]_i_1_n_0                                   |                                                  |               15 |             64 |         4.27 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[4][31]_i_1_n_0                                   |                                                  |               13 |             64 |         4.92 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_mul/product[63]_i_1_n_0                               | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               16 |             64 |         4.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[7][31]_i_1_n_0                                   |                                                  |               14 |             64 |         4.57 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[5][31]_i_1_n_0                                   |                                                  |               17 |             64 |         3.76 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[3][31]_i_1_n_0                                   |                                                  |               12 |             64 |         5.33 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/If/if_buf[2][31]_i_1_n_0                                   |                                                  |               16 |             64 |         4.00 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/M_FUNC3_o_reg[2]_0                                   |                                                  |               21 |             67 |         3.19 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/Ex/m_div/cnt[5]_i_1_n_0                                    | mini_rv_u/id_ex/FSM_onehot_state_reg[1]          |               18 |             69 |         3.83 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/id_ex/pred_taken_o_reg_0                                   | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               36 |            105 |         2.92 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/if_id/inst_o_reg[5]_0[0]                                   |                                                  |               26 |            130 |         5.00 |
+|  cpuClk/inst/clk_out1 |                                                                      | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               78 |            216 |         2.77 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/ex_mem/E[0]                                                | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               69 |            228 |         3.30 |
+|  cpuClk/inst/clk_out1 | mini_rv_u/ex_mem/p_0_in                                              | mini_rv_u/If/branchPredictor/bht/rd_index[3]_i_1 |               89 |            251 |         2.82 |
++-----------------------+----------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,595 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1246.754 ; gain = 24.840
+Command: synth_design -top top -part xc7z020clg400-2 -directive AreaOptimized_high -control_set_opt_threshold 1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39276
+WARNING: [Synth 8-992] predict_redirect is already implicitly declared earlier [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/IF.v:115]
+WARNING: [Synth 8-6901] identifier 'bram_dout' is used before its declaration [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:93]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1246.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/cpuclk_stub.v:5]
+WARNING: [Synth 8-7071] port 'reset' of module 'cpuclk' is unconnected for instance 'cpuClk' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/top.v:27]
+WARNING: [Synth 8-7023] instance 'cpuClk' of module 'cpuclk' has 4 connections declared, but only 3 given [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/top.v:27]
+INFO: [Synth 8-6157] synthesizing module 'mini_rv' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/miniRV.v:8]
+INFO: [Synth 8-6157] synthesizing module 'IF' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/IF.v:12]
+INFO: [Synth 8-6157] synthesizing module 'BranchCTRL' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/BranchCTRL.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'BranchCTRL' (2#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/BranchCTRL.v:12]
+INFO: [Synth 8-6157] synthesizing module 'BranchPredictor' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BranchPredictor.v:13]
+INFO: [Synth 8-6157] synthesizing module 'BHT' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BHT.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'BHT' (3#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BHT.v:12]
+INFO: [Synth 8-6157] synthesizing module 'BTB' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BTB.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'BTB' (4#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BTB.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'BranchPredictor' (5#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/pc/BranchPredictor.v:13]
+INFO: [Synth 8-6157] synthesizing module 'iCache_Wrapper' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/iCache_Wrapper.v:7]
+INFO: [Synth 8-6157] synthesizing module 'InstMem' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/instMem.v:6]
+INFO: [Synth 8-6157] synthesizing module 'inst_mem' [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'inst_mem' (6#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'InstMem' (7#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/instMem.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cache' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:8]
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+	Parameter USE_DCACHE_BRAM bound to: 0 - type: integer 
+	Parameter PIPELINE_WRITE bound to: 1 - type: integer 
+	Parameter FILL_ONLY_WRITE bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'icache_data_bram' [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/icache_data_bram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'icache_data_bram' (8#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/icache_data_bram_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element pipe_byte_we_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:92]
+WARNING: [Synth 8-7137] Register rd_index_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:52]
+WARNING: [Synth 8-7137] Register rd_tag_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:52]
+WARNING: [Synth 8-7137] Register pipe_index_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:85]
+WARNING: [Synth 8-7137] Register pipe_tag_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:86]
+WARNING: [Synth 8-7137] Register pipe_hit0_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:87]
+WARNING: [Synth 8-7137] Register pipe_hit1_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:88]
+WARNING: [Synth 8-7137] Register pipe_way0_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:89]
+WARNING: [Synth 8-7137] Register pipe_way1_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:90]
+WARNING: [Synth 8-7137] Register pipe_din_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:91]
+WARNING: [Synth 8-7137] Register pipe_bram_dout_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:93]
+WARNING: [Synth 8-7137] Register tag0_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register tag1_reg in module cache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'tag0_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "tag0_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'tag1_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "tag1_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'cache' (9#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'iCache_Wrapper' (10#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/iCache_Wrapper.v:7]
+WARNING: [Synth 8-7137] Register if_buf_reg in module IF has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register if_buf_pc_reg in module IF has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'if_buf_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "if_buf_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'if_buf_pc_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "if_buf_pc_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'IF' (11#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/IF.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/IF_ID.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID' (12#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/IF_ID.v:13]
+INFO: [Synth 8-6157] synthesizing module 'EX_IF' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX_IF.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'EX_IF' (13#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX_IF.v:14]
+INFO: [Synth 8-6157] synthesizing module 'InstDivider' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/InstDivider.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'InstDivider' (14#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/InstDivider.v:15]
+INFO: [Synth 8-6157] synthesizing module 'CTRL' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/CTRL.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ALUope' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ALUope.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ALUope' (15#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ALUope.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'CTRL' (16#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/CTRL.v:13]
+WARNING: [Synth 8-7071] port 'inst_div' of module 'CTRL' is unconnected for instance 'ctrl_INSTDIV' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/miniRV.v:193]
+WARNING: [Synth 8-7023] instance 'ctrl_INSTDIV' of module 'CTRL' has 20 connections declared, but only 19 given [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/miniRV.v:193]
+INFO: [Synth 8-6157] synthesizing module 'ID' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/ID.v:8]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/regFIle.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (17#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/regFIle.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/immGen.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (18#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/immGen.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (19#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/ID.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/ID_EX.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX' (20#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/ID_EX.v:16]
+INFO: [Synth 8-6157] synthesizing module 'EX' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX.v:15]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/ALU.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (21#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/ALU.v:10]
+INFO: [Synth 8-6157] synthesizing module 'COMP' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/COMP.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'COMP' (22#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/alu/COMP.v:15]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_16c' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/M extension/multiplier.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_16c' (23#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/M extension/multiplier.v:9]
+INFO: [Synth 8-6157] synthesizing module 'divider_32c' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/M extension/divider.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/M extension/divider.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'divider_32c' (24#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/M extension/divider.v:9]
+INFO: [Synth 8-226] default block is never used [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'EX' (25#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX.v:15]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX_MEM.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM' (26#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/EX_MEM.v:15]
+INFO: [Synth 8-6157] synthesizing module 'MEM' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/MEM.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'MEM' (27#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/MEM.v:15]
+INFO: [Synth 8-6157] synthesizing module 'dCache_Wrapper' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/dCache_Wrapper.v:11]
+INFO: [Synth 8-6157] synthesizing module 'cache__parameterized0' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:8]
+	Parameter INDEX_WIDTH bound to: 4 - type: integer 
+	Parameter USE_DCACHE_BRAM bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'dcache_data_bram' [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/dcache_data_bram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dcache_data_bram' (28#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/dcache_data_bram_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element pipe_we_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:139]
+WARNING: [Synth 8-6014] Unused sequential element pipe_index_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:153]
+WARNING: [Synth 8-6014] Unused sequential element pipe_tag_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:154]
+WARNING: [Synth 8-6014] Unused sequential element pipe_hit0_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:155]
+WARNING: [Synth 8-6014] Unused sequential element pipe_hit1_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:156]
+WARNING: [Synth 8-6014] Unused sequential element pipe_way0_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:157]
+WARNING: [Synth 8-6014] Unused sequential element pipe_way1_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:158]
+WARNING: [Synth 8-6014] Unused sequential element pipe_din_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:159]
+WARNING: [Synth 8-6014] Unused sequential element pipe_byte_we_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:160]
+WARNING: [Synth 8-6014] Unused sequential element pipe_bram_dout_reg was removed.  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:161]
+WARNING: [Synth 8-7137] Register rd_index_reg in module cache__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:52]
+WARNING: [Synth 8-7137] Register rd_tag_reg in module cache__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:52]
+WARNING: [Synth 8-7137] Register tag0_reg in module cache__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register tag1_reg in module cache__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'tag0_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "tag0_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'tag1_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "tag1_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'cache__parameterized0' (28#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/cache.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dCache_Wrapper' (29#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/cache/dCache_Wrapper.v:11]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/MEM_WB.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB' (30#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/MEM_WB.v:14]
+INFO: [Synth 8-6157] synthesizing module 'WB' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/WB.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (31#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/combine/WB.v:18]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ForwardingUnit.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (32#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ForwardingUnit.v:14]
+INFO: [Synth 8-6157] synthesizing module 'ExceptionCTRL' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ExceptionCTRL.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'ExceptionCTRL' (33#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/ctrl/ExceptionCTRL.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'mini_rv' (34#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/miniRV.v:8]
+INFO: [Synth 8-6157] synthesizing module 'BUS' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/BUS/BUS.v:15]
+	Parameter ENABLE_NUMLED bound to: 1'b0 
+	Parameter ENABLE_LED_SWITCH bound to: 1'b0 
+	Parameter ENABLE_UART bound to: 1'b1 
+	Parameter ENABLE_TIMER bound to: 1'b1 
+	Parameter CPU_CLK_HZ bound to: 75000000 - type: integer 
+	Parameter UART_BAUD bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Interface_UART' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_UART.v:1]
+	Parameter CLK_FREQ bound to: 75000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_UART.v:41]
+	Parameter CLK_FREQ bound to: 75000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (35#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_UART.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'Interface_UART' (36#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_UART.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Interface_Timer' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_Timer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Interface_Timer' (37#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/interface_Timer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Interface_RAM' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/interface_RAM.v:16]
+INFO: [Synth 8-6157] synthesizing module 'InputCtrl_RAM' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/inputCtrl_RAM.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'InputCtrl_RAM' (38#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/inputCtrl_RAM.v:8]
+INFO: [Synth 8-6157] synthesizing module 'OutputCtrl_RAM' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/outputCtrl_RAM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'OutputCtrl_RAM' (39#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/outputCtrl_RAM.v:9]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/dataMem.v:10]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (40#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/.Xil/Vivado-40184-WDDdLaptop/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (41#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/basic/mem/dataMem.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'Interface_RAM' (42#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/interface_RAM/interface_RAM.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'BUS' (43#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/IO/BUS/BUS.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'top' (44#1) [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/sources_1/new/top.v:9]
+WARNING: [Synth 8-7129] Port adr[31] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[30] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[29] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[28] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[27] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[26] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[25] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[24] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[23] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[22] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[21] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[20] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[19] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[18] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[17] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[16] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[1] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adr[0] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module Interface_RAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module Interface_Timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[31] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[30] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[29] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[28] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[27] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[26] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[25] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[24] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[23] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[22] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[21] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[20] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[19] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[18] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[17] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[16] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[15] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[14] in module Interface_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[13] in module Interface_UART is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1253.750 ; gain = 6.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.750 ; gain = 6.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.750 ; gain = 6.996
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.286 . Memory (MB): peak = 1253.750 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/icache_data_bram/icache_data_bram/icache_data_bram_in_context.xdc] for cell 'mini_rv_u/If/IF_icache/u_cache/gen_icache_data.data_bram'
+Finished Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/icache_data_bram/icache_data_bram/icache_data_bram_in_context.xdc] for cell 'mini_rv_u/If/IF_icache/u_cache/gen_icache_data.data_bram'
+Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/inst_mem_3/inst_mem/inst_mem_in_context.xdc] for cell 'mini_rv_u/If/IF_icache/backing_mem/irom'
+Finished Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/inst_mem_3/inst_mem/inst_mem_in_context.xdc] for cell 'mini_rv_u/If/IF_icache/backing_mem/irom'
+Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/data_mem_2/data_mem/data_mem_in_context.xdc] for cell 'bus/interface_RAM/dRAM/RAM'
+Finished Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/data_mem_2/data_mem/data_mem_in_context.xdc] for cell 'bus/interface_RAM/dRAM/RAM'
+Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk/cpuclk_in_context.xdc] for cell 'cpuClk'
+Finished Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk/cpuclk_in_context.xdc] for cell 'cpuClk'
+Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/dcache_data_bram/dcache_data_bram/dcache_data_bram_in_context.xdc] for cell 'mini_rv_u/dcache/u_dcache/gen_dcache_data.data_bram'
+Finished Parsing XDC File [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/dcache_data_bram/dcache_data_bram/dcache_data_bram_in_context.xdc] for cell 'mini_rv_u/dcache/u_dcache/gen_dcache_data.data_bram'
+Parsing XDC File [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/constrs_1/new/timing.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk_pin' completely overrides clock 'clk'.
+New: create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} [get_ports clk], [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/constrs_1/new/timing.xdc:9]
+Previous: create_clock -period 20.000 [get_ports clk], [d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk/cpuclk_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/constrs_1/new/timing.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/riscv32_pipeline_v1/riscv32_pipeline.srcs/constrs_1/new/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1386.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1386.531 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'bus/interface_RAM/dRAM/RAM' at clock pin 'clka' is different from the actual clock period '13.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mini_rv_u/If/IF_icache/backing_mem/irom' at clock pin 'clka' is different from the actual clock period '13.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mini_rv_u/If/IF_icache/u_cache/gen_icache_data.data_bram' at clock pin 'clka' is different from the actual clock period '13.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mini_rv_u/dcache/u_dcache/gen_dcache_data.data_bram' at clock pin 'clka' is different from the actual clock period '13.333', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk/cpuclk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/riscv32_pipeline_v1/riscv32_pipeline.gen/sources_1/ip/cpuclk_2/cpuclk/cpuclk_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for mini_rv_u/If/IF_icache/u_cache/\gen_icache_data.data_bram . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mini_rv_u/If/IF_icache/backing_mem/irom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for bus/interface_RAM/dRAM/RAM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpuClk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for mini_rv_u/dcache/u_dcache/\gen_dcache_data.data_bram . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divider_32c'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                    CALC |                              010 |                               01
+                  FINISH |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'divider_32c'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                             0001 |                              000
+                 s_START |                             0010 |                              001
+                  s_DATA |                             0100 |                              010
+                  s_STOP |                             1000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   34 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 2     
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 12    
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 97    
+	               26 Bit    Registers := 82    
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 128   
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 135   
+	                1 Bit    Registers := 279   
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 3     
+	   4 Input   34 Bit        Muxes := 2     
+	   2 Input   33 Bit        Muxes := 2     
+	   3 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 74    
+	   3 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input   24 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 2     
+	   7 Input    6 Bit        Muxes := 2     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 11    
+	   3 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	  12 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 443   
+	   4 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 41    
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:08:36 ; elapsed = 00:08:56 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:08:48 ; elapsed = 00:09:08 . Memory (MB): peak = 1386.672 ; gain = 139.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:09:10 ; elapsed = 00:09:31 . Memory (MB): peak = 1388.234 ; gain = 141.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:09:20 ; elapsed = 00:09:41 . Memory (MB): peak = 1411.887 ; gain = 165.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module cpuClk has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:09:29 ; elapsed = 00:09:51 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:29 ; elapsed = 00:09:51 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:32 ; elapsed = 00:09:54 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:32 ; elapsed = 00:09:54 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:32 ; elapsed = 00:09:54 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:32 ; elapsed = 00:09:54 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |cpuclk           |         1|
+|2     |data_mem         |         1|
+|3     |inst_mem         |         1|
+|4     |icache_data_bram |         1|
+|5     |dcache_data_bram |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |cpuclk           |     1|
+|2     |data_mem         |     1|
+|3     |dcache_data_bram |     1|
+|4     |icache_data_bram |     1|
+|5     |inst_mem         |     1|
+|6     |CARRY4           |   186|
+|7     |LUT1             |   145|
+|8     |LUT2             |   447|
+|9     |LUT3             |   569|
+|10    |LUT4             |   430|
+|11    |LUT5             |  1019|
+|12    |LUT6             |  2765|
+|13    |MUXF7            |   797|
+|14    |MUXF8            |   329|
+|15    |FDCE             |  3874|
+|16    |FDPE             |   258|
+|17    |FDRE             |  2708|
+|18    |FDSE             |    33|
+|19    |IBUF             |     1|
+|20    |OBUF             |     1|
++------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:33 ; elapsed = 00:09:54 . Memory (MB): peak = 1424.066 ; gain = 177.312
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 100 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:05 ; elapsed = 00:09:46 . Memory (MB): peak = 1424.066 ; gain = 44.391
+Synthesis Optimization Complete : Time (s): cpu = 00:09:33 ; elapsed = 00:09:55 . Memory (MB): peak = 1424.066 ; gain = 177.312
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.358 . Memory (MB): peak = 1436.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1312 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1439.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 5ec218bf
+INFO: [Common 17-83] Releasing license: Synthesis
+112 Infos, 146 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:46 ; elapsed = 00:10:12 . Memory (MB): peak = 1439.781 ; gain = 193.027
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/riscv32_pipeline_v1/riscv32_pipeline.runs/synth_1_copy_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May  7 22:53:06 2026...

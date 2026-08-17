@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat May  2 21:40:30 2026
+# Process ID: 17632
+# Current directory: D:/riscv32_pipeline/riscv32_pipeline.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/riscv32_pipeline/riscv32_pipeline.runs/synth_1/top.vds
+# Journal file: D:/riscv32_pipeline/riscv32_pipeline.runs/synth_1\vivado.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

@@ -1,0 +1,12 @@
+metric,value
+cycles,2000000
+branch_total,1080
+branch_correct,1020
+branch_fail,60
+accuracy_percent,94.44
+b_total,1012
+b_correct,973
+b_accuracy_percent,96.15
+j_total,68
+j_correct,47
+j_accuracy_percent,69.12

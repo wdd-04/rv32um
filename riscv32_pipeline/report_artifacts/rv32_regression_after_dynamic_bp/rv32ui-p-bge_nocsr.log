@@ -1,0 +1,3 @@
+START test_current.mem
+RESULT TIMEOUT test_current.mem pc=00000240 mem_addr=00000000 mem_we=0000 mem_wd=00000000
+D:\riscv32_pipeline\riscv32_pipeline.srcs\sim_1\new\tb_bram_batch.v:152: $finish called at 2000000000 (1ps)

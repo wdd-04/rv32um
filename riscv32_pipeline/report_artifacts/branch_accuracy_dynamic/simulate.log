@@ -1,0 +1,3 @@
+Branch predictor accuracy simulation start
+mem file: D:/riscv32_pipeline/riscv32_pipeline.ip_user_files/mem_init_files/coremark_uart.mem
+BRANCH_ACC_SUMMARY cycles=2000000 total=118769 correct=79066 fail=39703 acc=66.57% b_total=118689 b_acc=66.62% j_total=80 j_acc=0.00%

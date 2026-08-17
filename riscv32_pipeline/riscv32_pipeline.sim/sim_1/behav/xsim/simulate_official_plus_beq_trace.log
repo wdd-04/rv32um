@@ -1,0 +1,225 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri May  1 23:16:18 2026
+# Process ID: 25864
+# Current directory: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log simulate_official_plus_beq_trace.log -mode tcl -source {xsim.dir/tb_official_plus_behav/xsim_script.tcl}
+# Log file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim/simulate_official_plus_beq_trace.log
+# Journal file: D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim\xsim.jou
+# Running On: WDDdLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16366 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_official_plus_behav/xsim_script.tcl
+# xsim {tb_official_plus_behav} -autoloadwcfg -tclbatch {run_all_coremark.tcl}
+Time resolution is 1 ps
+source run_all_coremark.tcl
+## run all
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+>>> Reset released, official test starts. mem=                                                                                                               official_test.mem
+TRACE[1] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000004 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[2] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[3] pc=00000054 wb_ena=1 wb_reg=1 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[4] pc=00000058 wb_ena=1 wb_reg=2 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[5] pc=0000005c wb_ena=1 wb_reg=3 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[6] pc=00000060 wb_ena=1 wb_reg=4 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[7] pc=00000064 wb_ena=1 wb_reg=5 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[8] pc=00000068 wb_ena=1 wb_reg=6 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[9] pc=0000006c wb_ena=1 wb_reg=7 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[10] pc=00000070 wb_ena=1 wb_reg=8 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[11] pc=00000074 wb_ena=1 wb_reg=9 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[12] pc=00000078 wb_ena=1 wb_reg=10 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[13] pc=0000007c wb_ena=1 wb_reg=11 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[14] pc=00000080 wb_ena=1 wb_reg=12 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[15] pc=00000084 wb_ena=1 wb_reg=13 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[16] pc=00000088 wb_ena=1 wb_reg=14 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[17] pc=0000008c wb_ena=1 wb_reg=15 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[18] pc=00000090 wb_ena=1 wb_reg=16 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[19] pc=00000094 wb_ena=1 wb_reg=17 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[20] pc=00000098 wb_ena=1 wb_reg=18 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[21] pc=0000009c wb_ena=1 wb_reg=19 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[22] pc=000000a0 wb_ena=1 wb_reg=20 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[23] pc=000000a4 wb_ena=1 wb_reg=21 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[24] pc=000000a8 wb_ena=1 wb_reg=22 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[25] pc=000000ac wb_ena=1 wb_reg=23 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[26] pc=000000b0 wb_ena=1 wb_reg=24 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[27] pc=000000b4 wb_ena=1 wb_reg=25 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[28] pc=000000b8 wb_ena=1 wb_reg=26 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[29] pc=000000bc wb_ena=1 wb_reg=27 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[30] pc=000000c0 wb_ena=1 wb_reg=28 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[31] pc=000000c4 wb_ena=1 wb_reg=29 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[32] pc=000000c8 wb_ena=1 wb_reg=30 wb_value=00000000 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[33] pc=000000cc wb_ena=1 wb_reg=31 wb_value=00000000 mem_we=0 mem_addr=ffffff14 mem_wd=00000000
+TRACE[34] pc=000000d0 wb_ena=1 wb_reg=10 wb_value=ffffff14 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[35] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[36] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[37] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[38] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[39] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[40] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[41] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[42] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[43] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[44] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[45] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[46] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[47] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[48] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[49] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[50] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[51] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[52] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[53] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[54] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[55] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[56] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[57] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[58] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[59] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[60] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[61] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[62] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[63] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[64] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[65] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[66] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[67] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[68] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[69] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[70] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[71] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[72] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[73] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[74] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[75] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[76] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[77] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[78] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[79] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[80] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[81] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[82] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[83] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[84] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[85] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[86] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[87] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[88] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[89] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[90] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[91] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[92] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[93] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[94] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[95] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[96] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[97] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[98] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[99] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[100] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[101] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[102] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[103] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[104] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[105] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[106] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[107] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[108] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[109] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[110] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[111] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[112] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[113] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[114] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[115] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[116] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[117] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[118] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[119] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[120] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[121] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[122] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[123] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[124] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[125] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[126] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[127] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[128] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[129] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[130] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[131] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[132] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[133] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[134] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[135] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[136] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[137] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[138] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[139] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[140] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[141] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[142] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[143] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[144] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[145] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[146] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[147] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[148] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[149] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[150] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[151] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[152] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[153] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[154] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[155] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[156] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[157] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[158] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[159] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[160] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[161] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[162] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[163] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[164] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[165] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[166] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[167] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[168] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[169] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[170] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[171] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[172] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[173] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[174] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[175] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[176] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[177] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[178] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[179] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[180] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[181] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[182] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[183] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[184] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[185] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[186] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[187] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[188] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[189] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[190] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[191] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[192] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[193] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[194] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[195] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[196] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[197] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[198] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+TRACE[199] pc=000000d4 wb_ena=0 wb_reg=0 wb_value=000000d4 mem_we=0 mem_addr=00000000 mem_wd=00000000
+TRACE[200] pc=00000000 wb_ena=1 wb_reg=0 wb_value=00000000 mem_we=0 mem_addr=000000d4 mem_wd=00000000
+!!! TIMEOUT: pc=00000000 mem_addr=00000000 mem_we=0 mem_wd=00000000
+$finish called at time : 20 ms : File "D:/riscv32_pipeline/riscv32_pipeline.sim/sim_1/behav/xsim/tb_official_plus.v" Line 86
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:43 . Memory (MB): peak = 1180.754 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1180.754 ; gain = 536.355
+INFO: xsimkernel Simulation Memory Usage: 12076 KB (Peak: 12076 KB), Simulation CPU Usage: 42249 ms
+INFO: [Common 17-206] Exiting xsim at Fri May  1 23:17:03 2026...

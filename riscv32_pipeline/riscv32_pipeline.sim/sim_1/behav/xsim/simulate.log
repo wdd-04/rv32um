@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+>>> official simulation started: D:/riscv32_pipeline/riscv32_pipeline.ip_user_files/mem_init_files/rv32ui-p-add_nocsr.mem
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+>>> official simulation started: D:/riscv32_pipeline/riscv32_pipeline.ip_user_files/mem_init_files/rv32ui-p-add_nocsr.mem
+>>> PASS: rv32ui-p-add passed. time=5245000 pc=000005cc
+$finish called at time : 5245 ns : File "D:/riscv32_pipeline/riscv32_pipeline.srcs/sim_1/new/tb_official_add.v" Line 82

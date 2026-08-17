@@ -1,0 +1,8 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: F:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.tb_rv32um_verbose xil_defaultlib.glbl -debug typical -s tb_rv32um_verbose_behav 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <dist_mem_gen_v8_0_13> not found while processing module instance <inst> [D:/riscv32_pipeline/riscv32_pipeline.gen/sources_1/ip/inst_mem_3/sim/inst_mem.v:64]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
