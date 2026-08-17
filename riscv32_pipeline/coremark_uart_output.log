@@ -1,7 +1,0 @@
-
-=================================
-RISC-V RV32IM CoreMark Started!
-Timer ADDR: 0xFFFFF090
-UART TX: 0xFFFFF080, STATUS: 0xFFFFF084
-Freq: 75000000 Hz
-=================================
