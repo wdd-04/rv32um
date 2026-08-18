@@ -11,6 +11,18 @@
 | `riscv32_pipeline/` | 核心工程：RV32UM 五级流水线 CPU，含分支预测、Cache、UART/Timer/LED 等外设，已移植 CoreMark 基准测试 |
 | `top_axi_iic_spi/` | 外设工程：基于 AXI4-Lite 总线的 IIC + SPI 主控制器 |
 
+rv32um/
+├── .gitignore
+├── README.md
+├── riscv32_pipeline/           # 主处理器工程（五级流水线 RV32UM）
+│   ├── coremark-main/           #   CoreMark 基准测试源码
+│   ├── riscv32_pipeline.srcs/   #   源码集（RTL / Testbench / 约束 / IP）
+│   ├── tools/                   #   辅助工具（指令集模拟器）
+│   ├── riscv32_pipeline.xpr     #   Vivado 工程文件
+│   └── *.coe / *.mem            #   存储器初始化文件
+└── top_axi_iic_spi/             # 外设子工程（AXI IIC/SPI）
+    ├── top_axi_iic_spi.srcs/    #   源码集（RTL / Testbench）
+    └── top_axi_iic_spi.xpr      #   Vivado 工程文件
 ---
 
 ## 1. riscv32_pipeline（CPU 核心工程）
@@ -37,11 +49,12 @@
 
 ### M 扩展（`M extension/`）
 
-- `multiplier.v` — 乘法器（MUL/MULH/MULHSU/MULHU）
-- `divider.v` — 除法器（DIV/DIVU/REM/REMU）
+- `multiplier.v` — 16周期乘法器（MUL/MULH/MULHSU/MULHU）
+- `divider.v` — 32周期除法器（DIV/DIVU/REM/REMU）
 
 ### Cache（`cache/`）
 
+- 二路组相联
 - `cache.v` — Cache 控制器
 - `iCache_Wrapper.v` — 指令 Cache 包装（含 BRAM）
 - `dCache_Wrapper.v` — 数据 Cache 包装（含 BRAM）
@@ -49,8 +62,8 @@
 ### IO 与外设（`IO/`）
 
 - `BUS/BUS.v` — 总线仲裁
-- `interface_UART.v` — UART 串口
-- `interface_Timer.v` — 定时器
+- `interface_UART.v` — UART 串口 0xFFFF_F080 ~ 0xFFFF_F08F
+- `interface_Timer.v` — 定时器 0xFFFF_F090 ~ 0xFFFF_F09F
 - `interface_LED_SWITCH/` — LED 与拨码开关
 - `interface_NUMLED/` — 数码管
 - `interface_RAM/` — 外部 RAM 接口
