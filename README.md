@@ -11,6 +11,7 @@
 | `riscv32_pipeline/` | 核心工程：RV32UM 五级流水线 CPU，含分支预测、Cache、UART/Timer/LED 等外设，已移植 CoreMark 基准测试 |
 | `top_axi_iic_spi/` | 外设工程：基于 AXI4-Lite 总线的 IIC + SPI 主控制器 |
 
+文件夹结构如下：
 ```
 rv32um/
 ├── .gitignore
