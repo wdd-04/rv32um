@@ -1,0 +1,46 @@
+# Vivado generated directories
+*.cache/
+*.gen/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+
+# Vivado log & journal
+*.jou
+*.log
+*.str
+
+# Simulation artifacts
+*.vcd
+*.wdb
+*.vvp
+xsim.dir/
+
+# Synthesis artifacts
+*.dcp
+*.bit
+*.bin
+
+# Compiled / binary
+*.exe
+*.o
+*.obj
+*.elf
+
+# Backup files
+*.bak
+*.bak_*
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

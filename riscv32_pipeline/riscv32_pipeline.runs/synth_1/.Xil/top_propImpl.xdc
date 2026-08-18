@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:D:/riscv32_pipeline/riscv32_pipeline.srcs/constrs_1/new/timing.xdc rfile:../../../riscv32_pipeline.srcs/constrs_1/new/timing.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN U18 IOSTANDARD LVCMOS33} [get_ports clk]
-set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports rst]
-set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN M15 IOSTANDARD LVCMOS33} [get_ports tx_out]
